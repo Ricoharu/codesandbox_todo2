@@ -2,6 +2,24 @@ body {
   font-family: sans-serif;
 }
 
+input {
+  border-radius: 16px;
+  border: none;
+  padding: 6px 16px;
+  outline: none;
+}
+
+button {
+  border-radius: 16px;
+  border: none;
+  padding: 4px 16px;
+  
+}
+button:hover {
+  background-color: #ff7fff;
+  color:#fff;
+  cursor: pointer;
+}
 .input-area {
   background-color: #c1ffff;
   width: 400px;
@@ -9,6 +27,10 @@ body {
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
+}
+
+li {
+  margin-right: 8px;
 }
 
 .imcomplete-area {
@@ -29,5 +51,17 @@ body {
   border-radius: 8px;
 }
 
+.title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
 
 /*# sourceMappingURL=/src.a2b27638.css.map */
