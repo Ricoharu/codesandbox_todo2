@@ -176,6 +176,18 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
+var onClickAdd = function onClickAdd() {
+  //テキストボックスの値を取得し初期化する
+  var inputText = document.querySelector("#add-text").value;
+  document.querySelector("#add-text").value = "";
+  //div生成
+  var div = document.createElement('div');
+  div.className = "list-row";
+  console.log(div);
+};
+document.getElementById("add-button").addEventListener("click", function () {
+  onClickAdd();
+});
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
