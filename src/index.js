@@ -26,7 +26,27 @@ const onClickAdd = () => {
     //div以下は初期化
     addTarget.textContent = null;
 
-    //
+    //li生成
+    const li = document.createElement("li");
+    li.innerText = text;
+    //buttonタグ生成
+    const backButton = document.createElement("button");
+    backButton.innerText = "戻す";
+    backButton.addEventListener("click", () => {
+      //押された戻すボタンの親タグを（div）を完了リストから削除
+      const deleteTarget = backButton.parentNode;
+      document.querySelector("#complete-list").removeChild(deleteTarget);
+
+      //テキストの取得
+      const text = backButton.parentNode.firstElementChild.innerText;
+      console.log(text);
+    });
+
+    //divタグの子要素を設定
+    addTarget.appendChild(li);
+    addTarget.appendChild(backButton);
+    //完了リストに追加
+    document.querySelector("#complete-list").appendChild(addTarget);
   });
 
   //button(削除)タグ生成
